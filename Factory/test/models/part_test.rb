@@ -1,13 +1,13 @@
 require 'test_helper'
 
 class PartTest < ActiveSupport::TestCase
-  test "product attributes must not be empty" do
-    product = Product.new
-    assert product.invalid?
-    assert product.errors[:title].any?
-    assert product.errors[:description].any?
-    assert product.errors[:price].any?
-    assert product.errors[:image_url].any?
+  test "part attributes must not be empty" do
+    part = Parts.new
+    assert part.invalid?
+    assert part.errors[:title].any?
+    assert part.errors[:description].any?
+    assert part.errors[:price].any?
+    assert part.errors[:image_url].any?
   end
   #   assert true
   # end
