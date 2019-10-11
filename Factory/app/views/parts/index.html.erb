@@ -2,32 +2,28 @@
 
 <h1>Parts</h1>
 
+
 <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Price</th>
-      <th colspan="3"></th>
+  <% @parts.each do |part| %>
+    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+      <td>
+        <%= image_tag(part.image_url, class: 'list_image') %>
+      </td>
+      <td class="list_description">
+        <dl>
+          <dt><%= part.title %></dt>
+          <dd><%= truncate(strip_tags(part.description),
+                           length: 30) %></dd>
+        </dl>
+      </td>
+      <td class="list_actions">
+        <%= link_to 'Show', part %><br/>
+        <%= link_to 'Edit', edit_part_path(part) %><br/>
+        <%= link_to 'Destroy', part, method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
+      </td>
     </tr>
-  </thead>
-
-  <tbody>
-    <% @parts.each do |part| %>
-      <tr>
-        <td><%= part.title %></td>
-        <td><%= part.description %></td>
-        <td><%= part.image_url %></td>
-        <td><%= part.price %></td>
-        <td><%= link_to 'Show', part %></td>
-        <td><%= link_to 'Edit', edit_part_path(part) %></td>
-        <td><%= link_to 'Destroy', part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% end %>
 </table>
-
-<br>
-
-<%= link_to 'New Part', new_part_path %>
+<br />
+<%= link_to 'New part', new_part_path %>
