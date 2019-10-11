@@ -3,6 +3,12 @@ require 'test_helper'
 class PartsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @part = parts(:one)
+    @update = {
+        title:        'Lorem Ipsum',
+        description:  'Wibbles are fun!',
+        image_url:    'lorem.jpg',
+        price:        19.95
+    }
   end
 
   test "should get index" do
@@ -17,10 +23,7 @@ class PartsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create part" do
     assert_difference('Part.count') do
-      post parts_url, params: { part: { description: @part.description,
-                                        image_url: @part.image_url,
-                                        price: @part.price,
-                                        title: @part.title } }
+      post part_url, params: { part: {part: @update}
     end
 
     assert_redirected_to part_url(Part.last)
@@ -38,11 +41,6 @@ class PartsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update part" do
     patch part_url(@part), params: { part: @update}
-    assert_redirected_to part_url(@part)
-    #{ description: @part.description,
-     #                                        image_url: @part.image_url,
-      #                                       price: @part.price,
-       #                                      title: @part.title } }
     assert_redirected_to part_url(@part)
   end
 
