@@ -1,11 +1,14 @@
-# README
-
-# README
-*Directions for assignment:
+# README CS 3270 Project
+*Directions for assignment 1:
     -Create scaffolds for makes, cars, parts
     -One to many relationship for make to cars
     -Many to many relationshiop for cars to parts
     -Create model Factory for many to many relationship 
+*Direcitons for assignment 2:
+    -Add validations to all your models. 
+    -Add a search in each index function. 
+    -Write unit tests for all code you create. 
+    --For extra credit, make the searches dynamic using Ajax.
     
 *Scaffolding:
 Cars -> Factory -> Parts
