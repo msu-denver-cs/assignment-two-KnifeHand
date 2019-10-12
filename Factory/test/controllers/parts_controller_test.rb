@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PartsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @part = parts(:one)
+    @part = part(:one)
     @update = {
         title:        'Lorem Ipsum',
         description:  'Wibbles are fun!',
@@ -12,7 +12,7 @@ class PartsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get parts_url
+    get part_url
     assert_response :success
   end
 
@@ -23,8 +23,8 @@ class PartsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create part" do
     assert_difference('Part.count') do
-      post part_url, params: { part: {part: @update}
-    end
+      post part_url, params: { part: {part: @update}#FIXME: Syntax error-> parts or part?
+      }
 
     assert_redirected_to part_url(Part.last)
   end
@@ -49,6 +49,7 @@ class PartsControllerTest < ActionDispatch::IntegrationTest
       delete part_url(@part)
     end
 
-    assert_redirected_to parts_url
+    assert_redirected_to part_url
   end
+end
 end

@@ -7,7 +7,7 @@ Parts
 
 
 <table>
-  <% @part.each do |part| %>
+  <% @parts.each do |part| %>
     <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
       <td>
         <%= image_tag(part.image_url, class: 'list_image') %>
