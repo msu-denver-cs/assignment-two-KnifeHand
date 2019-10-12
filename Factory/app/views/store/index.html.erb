@@ -1,0 +1,14 @@
+<h1>Parts Store</h1>
+<p>Find me in app/views/store/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+<h1>Your Parts Catalog</h1>
+<% @parts.each do |part| %>
+  <div class="entry">
+    <%= image_tag(part.image_url) %>
+    <h3><%= part.title %></h3>
+    <%= sanitize(part.description) %>
+    <div class="price_line">
+      <span class="price"><%= number_to_currency(part.price) %></span>
+    </div>
+  </div>
+<% end %>
