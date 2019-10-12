@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :makes
   root 'store#index', as: 'store_index'
   resources :cars
   resources :parts
