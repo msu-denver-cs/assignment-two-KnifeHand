@@ -8,8 +8,8 @@
     -Create model Factory for many to many relationship 
     
 *Scaffolding:
-Make -> Cars -> Factory -> Parts
-(one)     (many)    (model)     (many)
+Cars -> Factory -> Parts
+one to many
     
     
     Commands Used:
@@ -17,8 +17,6 @@ Make -> Cars -> Factory -> Parts
     $rails generate scaffold Part Title:string description:text image_url:string price:decimal
     $rails generate Model CarsParts cars:references parts:references
     $rails generate scaffold Car Make:string Model:string Vin:integer make:references
-    
-    Commands Used Throughout:
     $bin/rails db:seed
     $rails db:migrate
     $rails test
