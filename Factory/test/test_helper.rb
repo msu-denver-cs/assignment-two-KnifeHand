@@ -8,3 +8,15 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+require 'simplecov'
+SimpleCov.formatter = SimpleCov::Formatter::SimpleFormatter
+
+SimpleCov.at_exit do
+  puts SimpleCov.result.format!
+end
+
+SimpleCov.start do
+  add_group "app", "app"
+  add_group "test", "test"
+end

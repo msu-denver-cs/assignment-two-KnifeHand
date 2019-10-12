@@ -4,10 +4,10 @@ one:
   Make: MyString
   Model: MyString
   Vin: MyString
-  Country: 
+  Country: MyString
 
 two:
   Make: MyString
   Model: MyString
   Vin: MyString
-  Country: 
+  Country: MyString
