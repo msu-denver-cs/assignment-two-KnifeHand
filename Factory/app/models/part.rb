@@ -1,4 +1,6 @@
 class Part < ApplicationRecord
+  has_many :cars_parts
+  has_many :cars, through: :cars_parts
   validates :title, :description, :image_url, presence: true
   validates :price, numericality: {greater_than_or_equal_to: 0.01}
   validates :title, uniqueness: true

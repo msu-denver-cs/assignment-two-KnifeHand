@@ -4,7 +4,7 @@ class PartsController < ApplicationController
   # GET /parts
   # GET /parts.json
   def index
-    @parts = Part.all
+    @part = Part.all
   end
 
   # GET /parts/1
@@ -15,10 +15,12 @@ class PartsController < ApplicationController
   # GET /parts/new
   def new
     @part = Part.new
+    @car = Car.all
   end
 
   # GET /parts/1/edit
   def edit
+    @car = Car.all
   end
 
   # POST /parts
@@ -70,5 +72,9 @@ class PartsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def part_params
       params.require(:part).permit(:title, :description, :image_url, :price)
+    end
+
+    def print_part_name
+      3
     end
 end

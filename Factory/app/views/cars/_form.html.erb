@@ -32,9 +32,10 @@
   </div>
 
   <div class="field">
-    <%= form.label :make_id %>
-    <%form.collection_select :make_id, @makes, :id, :name %>
+    <%= form.label :cars_parts %><br>
+    <!--%form.collection_select :title %--><!-- TODO: fix this dropdown association -->
   </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

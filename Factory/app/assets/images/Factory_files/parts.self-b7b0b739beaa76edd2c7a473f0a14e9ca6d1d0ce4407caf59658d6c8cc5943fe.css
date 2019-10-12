@@ -1,0 +1,46 @@
+/* line 5, /Users/matthewhurt/work/assignment-two-KnifeHand/Factory/app/assets/stylesheets/parts.scss */
+.parts table {
+  border-collapse: collapse;
+}
+/* line 9, /Users/matthewhurt/work/assignment-two-KnifeHand/Factory/app/assets/stylesheets/parts.scss */
+.parts table tr td {
+  padding: 2px;
+  vertical-align: top;
+}
+/* line 14, /Users/matthewhurt/work/assignment-two-KnifeHand/Factory/app/assets/stylesheets/parts.scss */
+.parts .list_image {
+  width: 10px;
+  height: 20px;
+}
+/* line 19, /Users/matthewhurt/work/assignment-two-KnifeHand/Factory/app/assets/stylesheets/parts.scss */
+.parts .list_description {
+  width: 30%;
+}
+/* line 22, /Users/matthewhurt/work/assignment-two-KnifeHand/Factory/app/assets/stylesheets/parts.scss */
+.parts .list_description dl {
+  margin: 1;
+}
+/* line 26, /Users/matthewhurt/work/assignment-two-KnifeHand/Factory/app/assets/stylesheets/parts.scss */
+.parts .list_description dt {
+  color: #244;
+  font-weight: bold;
+  font-size: larger;
+}
+/* line 32, /Users/matthewhurt/work/assignment-two-KnifeHand/Factory/app/assets/stylesheets/parts.scss */
+.parts .list_description dd {
+  margin: 0;
+}
+/* line 37, /Users/matthewhurt/work/assignment-two-KnifeHand/Factory/app/assets/stylesheets/parts.scss */
+.parts .list_actions {
+  font-size: x-small;
+  text-align: right;
+  padding-left: 1em;
+}
+/* line 43, /Users/matthewhurt/work/assignment-two-KnifeHand/Factory/app/assets/stylesheets/parts.scss */
+.parts .list_line_even {
+  background: #e0f8f8;
+}
+/* line 47, /Users/matthewhurt/work/assignment-two-KnifeHand/Factory/app/assets/stylesheets/parts.scss */
+.parts .list_line_odd {
+  background: #f8b0f8;
+}
