@@ -5,6 +5,12 @@
 Parts
 </h1>
 
+<!-- Parts search-->
+<%= form_tag(search_parts_url, method: "get") do %>
+  <%= label_tag(:query, "Search parts by name:") %>
+  <%=text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+  <% end %>
 
 <table>
   <% @parts.each do |part| %>
