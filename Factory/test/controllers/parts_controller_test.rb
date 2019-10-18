@@ -23,7 +23,11 @@ class PartsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create part" do
     assert_difference('Part.count') do
-      post part_url, params: { part: {part: @update}#FIXME: Syntax error-> parts or part?
+      post part_url, params: { part: {part: @part.part,
+                                      title: @part.title,
+                                      description: @part.description,
+                                      image_url: @part.image_url,
+                                      price: @part.price}
       }
 
     assert_redirected_to part_url(Part.last)

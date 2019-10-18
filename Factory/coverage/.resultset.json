@@ -1,6 +1,56 @@
 {
   "MiniTest": {
     "coverage": {
+      "/Users/matthewhurt/work/assignment-two-KnifeHand/Factory/test/controllers/makes_controller_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null
+      ],
       "/Users/matthewhurt/work/assignment-two-KnifeHand/Factory/test/controllers/parts_controller_test.rb": [
         1,
         null,
@@ -28,6 +78,10 @@
         1,
         0,
         0,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         0,
@@ -84,6 +138,15 @@
         null
       ],
       "/Users/matthewhurt/work/assignment-two-KnifeHand/Factory/test/models/cars_part_test.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/matthewhurt/work/assignment-two-KnifeHand/Factory/test/models/make_test.rb": [
         1,
         null,
         1,
@@ -152,6 +215,6 @@
         null
       ]
     },
-    "timestamp": 1570897575
+    "timestamp": 1571085290
   }
 }

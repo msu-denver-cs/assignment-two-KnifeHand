@@ -14,7 +14,7 @@
   <tbody>
     <% @makes.each do |make| %>
       <tr>
-        <td><%= make.name %></td>
+        <td><%= car.make.name %></td>
         <td><%= make.country %></td>
         <td><%= link_to 'Show', make %></td>
         <td><%= link_to 'Edit', edit_make_path(make) %></td>
