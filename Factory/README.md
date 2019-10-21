@@ -9,6 +9,8 @@
     -Add a search in each index function. 
     -Write unit tests for all code you create. 
     --For extra credit, make the searches dynamic using Ajax.
+*Directions for assignment 3:
+    -
     
 *Scaffolding:
 Cars -> Factory -> Parts
@@ -30,7 +32,12 @@ one to many
     $rails db:update
     $rails db:drop
     
-    
+*Validations Parts ApplicationRecord
+    - text fields to see if they all contain something before a row is written to the database.
+        - true if present and contents are not empty.
+    - valid price tests 1 cent against 1 number
+        - is a positive number (verbose)
+        - appropriate message will appear
     
 * ROR Info
 Rails version: 5.2.3

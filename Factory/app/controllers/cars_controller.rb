@@ -1,15 +1,18 @@
 class CarsController < ApplicationController
+  autocomplete :car, :model_title, full_search: true
   before_action :set_car, only: [:show, :edit, :update, :destroy]
 
   # GET /cars
   # GET /cars.json
   def index
     @cars = Car.all
+    @parts = Part.all
   end
 
   # GET /cars/1
   # GET /cars/1.json
   def show
+    @parts = Part.all
   end
 
   # GET /cars/new
@@ -20,7 +23,6 @@ class CarsController < ApplicationController
 
   # GET /cars/1/edit
   def edit
-    @cars = Car.all
     @parts = Part.all
   end
 
@@ -29,7 +31,7 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
 
-    respond_to do |format|
+    respond_to do |format| #FIXME: undefined method 'errors' for nil:NilClass
       if @car.save
         format.html { redirect_to @car, notice: 'Car was successfully created.' }
         format.json { render :show, status: :created, location: @car }
@@ -72,6 +74,6 @@ class CarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
-      params.require(:car).permit(:Make, :Model, :Vin, :make_id, :part_id => [])
+      params.require(:car).permit(:Make_title, :Model_title, :Vin_number, :make_id, :part_ids => [])
     end
 end

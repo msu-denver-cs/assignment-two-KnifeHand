@@ -1,5 +1,5 @@
-<%= form_with(model: part, local: true) do |form| %>
-  <% if part.errors.any? %>
+<%= form_with(model: part, local: true) do |form| %> <!-- FIXME: undefined method 'errors' for nil:NilClass -->
+  <% if part.errors.any? %> <!-- FIXME: undefined method 'errors' for nil:NilClass -->
     <div id="error_explanation">
       <h2><%= pluralize(part.errors.count, "error") %> prohibited this part from being saved:</h2>
 
