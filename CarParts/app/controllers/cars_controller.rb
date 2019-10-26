@@ -15,6 +15,7 @@ class CarsController < ApplicationController
   # GET /cars/new
   def new
     @car = Car.new
+    #@product = Product.all
   end
 
   # GET /cars/1/edit
