@@ -40,7 +40,7 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should update car" do #FIXME: FAIL:Expected response to be a <3XX: redirect>, but was a <200: OK>
+  test "should update car" do #FIXED: FAIL:Expected response to be a <3XX: redirect>, but was a <200: OK>
   patch car_url(@car), params: { car: @update}
     assert_redirected_to car_url(@car)
   end
