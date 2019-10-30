@@ -34,9 +34,15 @@ q
   <div class="field">
     <%= form.label :car %>
     <%= form.text_field :car %>
+    <!--f.collection_check_boxes (:library_ids, @libraries, :id, :name) %--> <!-- FIXME: Doesn't like this-->
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+
+  <!--div class ="field"-->
+    <!--%=form.label :product_id %-->
+    <!--%= form.collection_select :product_id, Car.all, :id, :make %-->
+  <!--/div-->
 <% end %>
