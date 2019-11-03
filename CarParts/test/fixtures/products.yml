@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
-  image_url: MyString
+  title: Radiator
+  description: Regulates temp
+  image_url: Radiator.jpg
   price: 9.99
-  car: MyString
+  car: Ford
+  #product: p1
 
 two:
-  title: MyString
-  description: MyText
-  image_url: MyString
+  title: Flux capacitor
+  description: Go back in time
+  image_url: Delorean.jpeg
   price: 9.99
-  car: MyString
+  car: Dodge
+  #product: p2

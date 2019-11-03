@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  make: MyString
-  model: MyString
-  year: MyString
-  vin: MyString
-  country: MyString
+  make: Ford
+  model: Escape
+  year: 9999
+  vin: 111222
+  country: USA
 
 two:
-  make: MyString
-  model: MyString
-  year: MyString
-  vin: MyString
-  country: MyString
+  make: Dodge
+  model: Charger
+  year: 9999
+  vin: 222111
+  country: USA
