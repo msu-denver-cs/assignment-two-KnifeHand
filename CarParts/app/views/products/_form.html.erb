@@ -41,8 +41,8 @@ q
     <%= form.submit %>
   </div>
 
-  <!--div class ="field"-->
-    <!--%=form.label :product_id %-->
-    <!--%= form.collection_select :product_id, Car.all, :id, :make %-->
-  <!--/div-->
+  <div class ="field">
+    <%=form.label :product_id %>
+    <%= form.collection_select :product_id, Car.all, :id, :make %>
+  </div>
 <% end %>

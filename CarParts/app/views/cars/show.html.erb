@@ -25,5 +25,12 @@
   <%= @car.country %>
 </p>
 
+<!--strong>Products:</strong--> <!-- FIXME: Breaks the page -->
+<!-- ul-->
+  <!-- % @car.products.each do |product| % -->
+  <!-- li><!-- %= products.products %></li -->
+  <!-- % end % -->
+<!-- /ul -->
+
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>
