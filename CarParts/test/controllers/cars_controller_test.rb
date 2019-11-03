@@ -22,7 +22,6 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create car" do #FIXME:FAIL:"Car.count" didn't change by 1. Expected: 3 Actual: 2 UPDATE: Commented out validation in car.rb. All tests pass
-
     assert_difference('Car.count') do
       post cars_url, params: { car: @update }
     end
@@ -51,6 +50,14 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to cars_url
+  end
+
+  test "shouldn't find a vin" do
+    assert Car.where("model like ?", "NOT vin")
+  end
+
+  test "shouldn't find a make" do
+    assert Car.where("make_id like ?", "NOT make_id")
   end
 
   #test"shouldn't find a missing car" do #FIXME: ???
