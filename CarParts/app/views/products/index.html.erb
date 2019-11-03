@@ -2,6 +2,14 @@
 
 <h1>Products</h1>
 
+<%= form_tag(search_products_url, method: "get") do %>
+  <%= label_tag(:query, "Search for:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+  <% end %>
+
+  <br/><div id="results"></div>
+
 <table>
   <thead>
     <tr>
