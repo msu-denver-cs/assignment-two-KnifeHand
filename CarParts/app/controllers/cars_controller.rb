@@ -61,7 +61,9 @@ class CarsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  def search
+    @cars = Car.where("vin like?", "%#{params[:query]}%")
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_car

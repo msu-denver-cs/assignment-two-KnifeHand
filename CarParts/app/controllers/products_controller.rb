@@ -62,6 +62,11 @@ class ProductsController < ApplicationController
     end
   end
 
+  def search
+    @product = Products.where("part like?", "%#{params[:query]}%")
+    render :index
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
@@ -73,3 +78,5 @@ class ProductsController < ApplicationController
       params.require(:product).permit(:title, :description, :image_url, :price, :car_ids => [])
     end
 end
+
+
