@@ -1,8 +1,10 @@
 require 'test_helper'
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
   setup do
     @product = products(:one)
+    sign_in users(:one)
     @update = {
         title: 'Lorem Ipsum',
         description: 'Wibbles are fun!',

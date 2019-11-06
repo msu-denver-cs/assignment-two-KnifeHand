@@ -6,6 +6,8 @@
         null,
         1,
         1,
+        1,
+        0,
         0,
         0,
         null,
@@ -152,24 +154,8 @@
         1,
         1,
         null
-      ],
-      "/Users/matthewhurt/work/assignment-two-KnifeHand/CarParts/app/models/car.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
-      "/Users/matthewhurt/work/assignment-two-KnifeHand/CarParts/app/models/cars_product.rb": [
-        1,
-        1,
-        1,
-        null
       ]
     },
-    "timestamp": 1572986959
+    "timestamp": 1573002316
   }
 }

@@ -1,8 +1,10 @@
 require 'test_helper'
 
 class CarsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
   setup do
     @car = cars(:one)
+    sign_in users(:one)
     @update = {
         make: 'Ipsum Lorem',
         model: 'Fun Wibbles?',
