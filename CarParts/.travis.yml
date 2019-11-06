@@ -1,0 +1,12 @@
+language: ruby
+rvm: -2.6
+
+dist: xenial
+
+addons:
+
+before_install: -gem install bundler -v 2.0.2
+
+script: - bundle exec rails test
+
+after_success:
